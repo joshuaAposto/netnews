@@ -1,0 +1,100 @@
+2026-03-05T03:39:15.230068692Z > tsx script/build.ts
+2026-03-05T03:39:15.230071692Z 
+2026-03-05T03:39:15.91162741Z building client...
+2026-03-05T03:39:15.970055487Z vite v7.3.0 building client environment for production...
+2026-03-05T03:39:16.448617402Z transforming...
+2026-03-05T03:39:20.78375951Z ✓ 2205 modules transformed.
+2026-03-05T03:39:21.224767385Z rendering chunks...
+2026-03-05T03:39:21.244109261Z computing gzip size...
+2026-03-05T03:39:21.269201051Z ../dist/public/index.html                   2.01 kB │ gzip:   0.77 kB
+2026-03-05T03:39:21.269234711Z ../dist/public/assets/index-Bjtjiv8z.css   97.41 kB │ gzip:  15.07 kB
+2026-03-05T03:39:21.269281331Z ../dist/public/assets/index-BNz-xqE_.js   896.90 kB │ gzip: 276.19 kB
+2026-03-05T03:39:21.269532141Z 
+2026-03-05T03:39:21.269544281Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-03-05T03:39:21.269549881Z - Using dynamic import() to code-split the application
+2026-03-05T03:39:21.269555191Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-03-05T03:39:21.269559951Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2026-03-05T03:39:21.269866061Z ✓ built in 5.13s
+2026-03-05T03:39:21.270013612Z building server...
+2026-03-05T03:39:21.287216526Z ▲ [WARNING] "import.meta" is not available with the "cjs" output format and will be empty [empty-import-meta]
+2026-03-05T03:39:21.287234966Z 
+2026-03-05T03:39:21.287239895Z     server/static.ts:6:33:
+2026-03-05T03:39:21.287244386Z       6 │ const __filename = fileURLToPath(import.meta.url);
+2026-03-05T03:39:21.287248795Z         ╵                                  ~~~~~~~~~~~
+2026-03-05T03:39:21.287253195Z 
+2026-03-05T03:39:21.287258095Z   You need to set the output format to "esm" for "import.meta" to work correctly.
+2026-03-05T03:39:21.287272675Z 
+2026-03-05T03:39:21.447727215Z 1 warning
+2026-03-05T03:39:21.447771685Z 
+2026-03-05T03:39:21.447791725Z   dist/index.cjs  1.3mb ⚠️
+2026-03-05T03:39:21.447797085Z 
+2026-03-05T03:39:21.447802435Z ⚡ Done in 165ms
+2026-03-05T03:39:33.665581156Z ==> Uploading build...
+2026-03-05T03:39:45.121780914Z ==> Uploaded in 5.9s. Compression took 5.5s
+2026-03-05T03:39:45.164647849Z ==> Build successful 🎉
+2026-03-05T03:39:47.77015581Z ==> Deploying...
+2026-03-05T03:39:47.840582853Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-03-05T03:40:24.21468088Z ==> Running 'npm run start'
+2026-03-05T03:40:25.40621025Z 
+2026-03-05T03:40:25.406236691Z > rest-express@1.0.0 start
+2026-03-05T03:40:25.406241521Z > NODE_ENV=production tsx server/index.ts
+2026-03-05T03:40:25.406244081Z 
+2026-03-05T03:40:39.807850174Z Warning: connect.session() MemoryStore is not
+2026-03-05T03:40:39.807885445Z designed for a production environment, as it will leak
+2026-03-05T03:40:39.807892506Z memory, and will not scale past a single process.
+2026-03-05T03:40:41.106334296Z Database initialized.
+2026-03-05T03:40:41.106753305Z Fetching and scraping latest news from BBC...
+2026-03-05T03:40:41.306479564Z Advanced Auto-post (Scraper) service initialized (Hourly)
+2026-03-05T03:40:41.403758381Z /opt/render/project/src/node_modules/path-to-regexp/src/index.ts:225
+2026-03-05T03:40:41.403781911Z       throw new PathError(`Missing parameter name at index ${index}`, str);
+2026-03-05T03:40:41.403788891Z             ^
+2026-03-05T03:40:41.403794581Z 
+2026-03-05T03:40:41.403802052Z PathError [TypeError]: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+2026-03-05T03:40:41.403810562Z     at name (/opt/render/project/src/node_modules/path-to-regexp/src/index.ts:225:13)
+2026-03-05T03:40:41.403815692Z     at parse (/opt/render/project/src/node_modules/path-to-regexp/src/index.ts:242:62)
+2026-03-05T03:40:41.403820952Z     at pathToRegexp (/opt/render/project/src/node_modules/path-to-regexp/src/index.ts:480:54)
+2026-03-05T03:40:41.403827192Z     at Object.match (/opt/render/project/src/node_modules/path-to-regexp/src/index.ts:438:28)
+2026-03-05T03:40:41.403833122Z     at matcher (/opt/render/project/src/node_modules/router/lib/layer.js:86:23)
+2026-03-05T03:40:41.403838733Z     at new Layer (/opt/render/project/src/node_modules/router/lib/layer.js:93:62)
+2026-03-05T03:40:41.403844633Z     at Function.use (/opt/render/project/src/node_modules/router/index.js:398:19)
+2026-03-05T03:40:41.403850603Z     at Function.<anonymous> (/opt/render/project/src/node_modules/express/lib/application.js:222:21)
+2026-03-05T03:40:41.403856623Z     at Array.forEach (<anonymous>)
+2026-03-05T03:40:41.403866863Z     at Function.use (/opt/render/project/src/node_modules/express/lib/application.js:219:7) {
+2026-03-05T03:40:41.403874283Z   originalPath: '*'
+2026-03-05T03:40:41.403879853Z }
+2026-03-05T03:40:41.403885123Z 
+2026-03-05T03:40:41.403890804Z Node.js v22.22.0
+2026-03-05T03:40:43.51507629Z ==> Exited with status 1
+2026-03-05T03:40:43.517462796Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2026-03-05T03:40:48.048146041Z ==> Running 'npm run start'
+2026-03-05T03:40:48.850810518Z 
+2026-03-05T03:40:48.850833259Z > rest-express@1.0.0 start
+2026-03-05T03:40:48.850837749Z > NODE_ENV=production tsx server/index.ts
+2026-03-05T03:40:48.850840339Z 
+2026-03-05T03:40:50.291943509Z ==> No open ports detected, continuing to scan...
+2026-03-05T03:40:50.390726994Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-03-05T03:41:03.050302263Z Warning: connect.session() MemoryStore is not
+2026-03-05T03:41:03.05740607Z designed for a production environment, as it will leak
+2026-03-05T03:41:03.057415511Z memory, and will not scale past a single process.
+2026-03-05T03:41:03.811882024Z Database initialized.
+2026-03-05T03:41:03.812127449Z Fetching and scraping latest news from BBC...
+2026-03-05T03:41:03.851868867Z Advanced Auto-post (Scraper) service initialized (Hourly)
+2026-03-05T03:41:03.948645493Z /opt/render/project/src/node_modules/path-to-regexp/src/index.ts:225
+2026-03-05T03:41:03.948670223Z       throw new PathError(`Missing parameter name at index ${index}`, str);
+2026-03-05T03:41:03.948675723Z             ^
+2026-03-05T03:41:03.948680324Z 
+2026-03-05T03:41:03.948685564Z PathError [TypeError]: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info
+2026-03-05T03:41:03.948691994Z     at name (/opt/render/project/src/node_modules/path-to-regexp/src/index.ts:225:13)
+2026-03-05T03:41:03.948696554Z     at parse (/opt/render/project/src/node_modules/path-to-regexp/src/index.ts:242:62)
+2026-03-05T03:41:03.948701154Z     at pathToRegexp (/opt/render/project/src/node_modules/path-to-regexp/src/index.ts:480:54)
+2026-03-05T03:41:03.948705554Z     at Object.match (/opt/render/project/src/node_modules/path-to-regexp/src/index.ts:438:28)
+2026-03-05T03:41:03.948710124Z     at matcher (/opt/render/project/src/node_modules/router/lib/layer.js:86:23)
+2026-03-05T03:41:03.948714674Z     at new Layer (/opt/render/project/src/node_modules/router/lib/layer.js:93:62)
+2026-03-05T03:41:03.948719184Z     at Function.use (/opt/render/project/src/node_modules/router/index.js:398:19)
+2026-03-05T03:41:03.948723865Z     at Function.<anonymous> (/opt/render/project/src/node_modules/express/lib/application.js:222:21)
+2026-03-05T03:41:03.948728614Z     at Array.forEach (<anonymous>)
+2026-03-05T03:41:03.948734735Z     at Function.use (/opt/render/project/src/node_modules/express/lib/application.js:219:7) {
+2026-03-05T03:41:03.948740135Z   originalPath: '*'
+2026-03-05T03:41:03.948744795Z }
+2026-03-05T03:41:03.948749055Z 
+2026-03-05T03:41:03.948753345Z Node.js v22.22.0
