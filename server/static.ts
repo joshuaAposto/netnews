@@ -1,35 +1,13 @@
 import express, { type Express } from "express";
-import fs from "fs";
 import path from "path";
-
-const __dirname = path.resolve();
+import fs from "fs";
 
 export function serveStatic(app: Express) {
 
-  const distPath = path.resolve(__dirname, "public");
+  const distPath = path.join(process.cwd(), "dist", "public");
 
   if (!fs.existsSync(distPath)) {
-
-    const altPath = path.resolve(process.cwd(), "dist", "public");
-
-    if (fs.existsSync(altPath)) {
-
-      app.use(express.static(altPath));
-
-      app.use((req, res, next) => {
-        if (req.path.startsWith("/api")) {
-          return next();
-        }
-
-        res.sendFile(path.resolve(altPath, "index.html"));
-      });
-
-      return;
-    }
-
-    throw new Error(
-      `Could not find the build directory: ${distPath}`
-    );
+    throw new Error(`Missing build folder: ${distPath}`);
   }
 
   app.use(express.static(distPath));
@@ -39,7 +17,7 @@ export function serveStatic(app: Express) {
       return next();
     }
 
-    res.sendFile(path.resolve(distPath, "index.html"));
+    res.sendFile(path.join(distPath, "index.html"));
   });
 
 }
