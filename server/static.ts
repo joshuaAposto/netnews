@@ -16,7 +16,7 @@ export function serveStatic(app: Express) {
 
       app.use(express.static(altPath));
 
-      app.get("/*", (req, res, next) => {
+      app.use((req, res, next) => {
         if (req.path.startsWith("/api")) {
           return next();
         }
@@ -34,7 +34,7 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
 
-  app.get("/*", (req, res, next) => {
+  app.use((req, res, next) => {
     if (req.path.startsWith("/api")) {
       return next();
     }
